@@ -18,8 +18,8 @@ marketing:
     site_type: Person
     local_business_type: ''
     org_name: ''
-    description: 'A highly-customizable Hugo academic resume theme powered by Wowchemy website builder.'
-    twitter: 'wowchemy'
+    description: 'Ph.D. student at Linköping University'
+    twitter: 'fahimsikder01'
   analytics:
     google_analytics: ''
     baidu_tongji: ''
@@ -34,7 +34,7 @@ marketing:
 header:
   navbar:
     enable: true
-    align: l
+    align: r
     show_logo: true
     show_language: false
     show_day_night: true
@@ -45,7 +45,7 @@ header:
 
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: '© {year} Md Fahim Sikder. This work is licensed under {license}'
     license:
       enable: true
       allow_derivatives: false
@@ -66,9 +66,9 @@ features:
     theme_light: github-light
     theme_dark: dracula
   math:
-    enable: false
+    enable: true
   privacy_pack:
-    enable: false
+    enable: true
   repository:
     url: 'https://github.com/<username>/<repository>'
     content_dir: content
@@ -96,9 +96,9 @@ features:
       index_name: ''
       show_logo: false
   map:
-    provider: ''
+    provider: 'mapbox'
     api_key: ''
-    zoom: 15
+    zoom: 16
 
 # Extensions
 

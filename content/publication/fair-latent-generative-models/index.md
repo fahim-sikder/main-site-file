@@ -3,6 +3,9 @@
 
 title: "Fair Latent Deep Generative Models (FLDGM) for Syntax-agnostic and Fair Synthetic Data Generation"
 authors:  ["Resmi Ramachandranpillai", "Md Fahim Sikder", "Fredrik Heintz"]
+author_notes:
+- "Equal contribution"
+- "Equal contribution"
 date: 2023-01-14T01:56:14+01:00
 doi: ""
 

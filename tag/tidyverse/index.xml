@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>tidyverse | Md Fahim Sikder</title><link>https://fahim-sikder.github.io/tag/tidyverse/</link><atom:link href="https://fahim-sikder.github.io/tag/tidyverse/index.xml" rel="self" type="application/rss+xml"/><description>tidyverse</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sun, 06 Sep 2020 20:39:11 +0600</lastBuildDate><image><url>https://fahim-sikder.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>tidyverse</title><link>https://fahim-sikder.github.io/tag/tidyverse/</link></image><item><title>How to Install R and two most popular R packages (tidyverse &amp; rstan) in Ubuntu 20.04 LTS</title><link>https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/</link><pubDate>Sun, 06 Sep 2020 20:39:11 +0600</pubDate><guid>https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/</guid><description>&lt;p>Hello there! In this post, we are going to see how we can install &lt;code>R&lt;/code> in our Ubuntu 20.04 LTS. Also, we will install two of R&amp;rsquo;s popular packages, namely: &lt;a href="https://www.tidyverse.org/" target="_blank" rel="noopener">tidyverse&lt;/a> &amp;amp; &lt;a href="https://mc-stan.org/users/interfaces/rstan" target="_blank" rel="noopener">rstan&lt;/a>. Both of these packages are important tools for data scientists. Rstan is the R interface for &lt;a href="https://mc-stan.org/" target="_blank" rel="noopener">stan&lt;/a>, which is the state-of-the-art platform for statistical modeling and high-performance statistical computation. I faced so much difficulty installing these. So, I decided to make it simple for you guys.&lt;/p>
+&lt;h3 id="installing-r">Installing R&lt;/h3>
+&lt;p>First, let&amp;rsquo;s install the &lt;code>R&lt;/code> in our system. We will install R from &lt;a href="https://cran.r-project.org/" target="_blank" rel="noopener">CRAN&lt;/a> repository. We need to install some dependencies for adding a new repository over HTTPS. To do that, we will run the following command in our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then, we need to add the CRAN repository to our system sources’ list. We can do that by typing the following commands into our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo add-apt-repository &amp;#39;deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Finally, we will install R by using the following command.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install r-base
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, the R should be installed in our system. To check that, we can run the following command into our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">R
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If R is installed correctly, the console will show something like this:&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Figure 1" srcset="
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_f03b895017f58720e72a0970f2cfa6db.webp 400w,
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_abe9c8a2ebe5f16b87f4e63c9aed8aee.webp 760w,
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_f03b895017f58720e72a0970f2cfa6db.webp"
+width="731"
+height="388"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="installing-tidyverse">Installing tidyverse&lt;/h3>
+&lt;p>Now, we will install the tidyverse packages. &lt;strong>Please note that we need to install &lt;code>tidyverse&lt;/code> first then install &lt;code>rstan&lt;/code>, because &lt;code>rstan&lt;/code> requires some dependencies. By installing &lt;code>tidyverse&lt;/code> first, it will make the job easier.&lt;/strong> First of all, we need to install some dependencies by typing the following commands in our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev libv8-dev
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then install &lt;code>tidyverse&lt;/code> by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo R
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">install.packages(&amp;#39;tidyverse&amp;#39;)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It will take some time to get installed. After installation, exit from the &lt;code>r&lt;/code> environment using the &lt;code>q()&lt;/code> function and be sure to save the environment when prompted.&lt;/p>
+&lt;h3 id="installing-rstan">Installing rstan&lt;/h3>
+&lt;p>To install the rstan, we need first check if our system has rstan already installed. If it has, then we need to remove it. We can do this by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">remove.packages(&amp;#34;rstan&amp;#34;)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">if (file.exists(&amp;#34;.RData&amp;#34;)) file.remove(&amp;#34;.RData&amp;#34;)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, we need to check the c++ toolchain. We can do that by using these commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo R
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">pkgbuild::has_build_tools(debug = TRUE)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This command will check if the installed c++ is using the pkgbuild package. The system will give the output &lt;code>TRUE&lt;/code> if it is using the pkgbuild package. Otherwise, we need to follow instructions from &lt;a href="https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Now, run the following command to install rstan.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">install.packages(&amp;#34;rstan&amp;#34;, repos = &amp;#34;https://cloud.r-project.org/&amp;#34;, dependencies = TRUE)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Again, it will take some time to get installed. After the installations, exit from the &lt;code>r&lt;/code> environment using &lt;code>q()&lt;/code> function and be sure to save the environment when prompted.&lt;/p>
+&lt;p>Happy Coding!!!&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ol>
+&lt;li>&lt;a href="https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/" target="_blank" rel="noopener">Blog post on installing R&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" target="_blank" rel="noopener">Official instruction of installing rstan&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Texlive-2021 | Md Fahim Sikder</title><link>https://fahim-sikder.github.io/tag/texlive-2021/</link><atom:link href="https://fahim-sikder.github.io/tag/texlive-2021/index.xml" rel="self" type="application/rss+xml"/><description>Texlive-2021</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2021 10:29:54 +0200</lastBuildDate><image><url>https://fahim-sikder.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Texlive-2021</title><link>https://fahim-sikder.github.io/tag/texlive-2021/</link></image><item><title>Installing Texlive Latest Version (Texlive-2021) on Ubuntu-20.04/18.04</title><link>https://fahim-sikder.github.io/post/installing-texlive-latest-ubuntu/</link><pubDate>Fri, 01 Oct 2021 10:29:54 +0200</pubDate><guid>https://fahim-sikder.github.io/post/installing-texlive-latest-ubuntu/</guid><description>&lt;p>Hello there! In this tutorial, we will learn how to install the latest version of texlive in the ubuntu system! Generally, Ubuntu 20.04 / 18.04 only install Texlive-version-2019 from the local repository! But the Texlive current version is 2021! So, a lot happened in these updates. So, we need to install the 2021 version from the source! But before we do that, we have to uninstall any existing Texlive installation.&lt;/p>
+&lt;h3 id="uninstalling-existing-texlive">Uninstalling existing Texlive&lt;/h3>
+&lt;p>Use the following command from the terminal to remove the existing installation of Texlive [3].&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get purge texlive*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /usr/local/texlive/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> rm -rf ~/.texlive*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /usr/local/share/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /var/lib/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /etc/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo apt-get remove tex-common --purge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> rm -rf ~/.texlive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>These commands should remove delete any existing texlive installation.&lt;/p>
+&lt;h3 id="installing-texlive-2021">Installing Texlive-2021&lt;/h3>
+&lt;p>Now it&amp;rsquo;s time for install the Texlive latest version! But first, we have to install some dependency [2]!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install wget perl-tk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We need to get the official installer for Texlive. We can do that by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> tar -xzf install-tl-unx.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> &lt;span class="nb">cd&lt;/span> install-tl-****
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here, **** means the version of the installer! Replace the **** according to your downloaded filename. After changing the directory to the downloaded folder, run the installer by using:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo ./install-tl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Installation of the latest version of the texlive should start. After the installation, we need to add the installation path with variables to the &lt;code>.bashrc&lt;/code> file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo vim ~/.bashrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following variables to the file:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">export PATH=/usr/local/texlive/2021/bin/x86_64-linux${PATH:+:${PATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After this, texlive should be installed in the system. We can check it by typing &lt;code>which tex&lt;/code> in the terminal. It should return the path where texlive is installed! Now we have to make sure that Ubuntu thinks we have installed texlive. We can do that by installing the &lt;code>equivs&lt;/code> package!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install equivs --no-install-recommends freeglut3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> wget -O debian-equivs-2021-ex.txt https://www.tug.org/texlive/files/debian-equivs-2021-ex.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We are using the &lt;code>debian-equivs-2021-ex.txt&lt;/code> file to build a &lt;code>.deb&lt;/code> file to install the necessary packages. To build the file and install it follow this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> equivs-build debian-equivs-2021-ex.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo dpkg -i texlive-local_2021.99999999-1_all.deb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After this, Texlive should be working just fine in Ubuntu!&lt;/p>
+&lt;p>Enjoy!&lt;/p>
+&lt;h3 id="common-issues-in-installation">Common Issues in Installation&lt;/h3>
+&lt;h4 id="installing-packages-using-texlive-manager-tlmgr">Installing Packages Using Texlive Manager (tlmgr)&lt;/h4>
+&lt;p>If we need to install / update packages in our texlive installations, we can use the &lt;code>Texlive manager (tlmgr)&lt;/code>. We can open the &lt;code>tlmgr&lt;/code> by typing the following in the terminal:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo tlmgr --gui
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>But sometimes, it can give the error, such as: &lt;code>tlmgr: command not found&lt;/code>. If this happens, do the following to open the texlive manager [2]:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo env &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> tlmgr --gui
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, it should work!&lt;/p>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://www.tug.org/texlive/doc/texlive-en/texlive-en.pdf" target="_blank" rel="noopener">Texlive Official Guide 2021&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu" target="_blank" rel="noopener">Post about installing Texlive: Answer Section&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu" target="_blank" rel="noopener">Post about removing Texlive: Answer Section&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

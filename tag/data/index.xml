@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Data | Md Fahim Sikder</title><link>https://fahim-sikder.github.io/tag/data/</link><atom:link href="https://fahim-sikder.github.io/tag/data/index.xml" rel="self" type="application/rss+xml"/><description>Data</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Thu, 30 Jul 2020 10:50:26 +0600</lastBuildDate><image><url>https://fahim-sikder.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>Data</title><link>https://fahim-sikder.github.io/tag/data/</link></image><item><title>Julia Tutorial Part 2: Data Structures</title><link>https://fahim-sikder.github.io/post/julia-tutorial-part-2-data-structures/</link><pubDate>Thu, 30 Jul 2020 10:50:26 +0600</pubDate><guid>https://fahim-sikder.github.io/post/julia-tutorial-part-2-data-structures/</guid><description>&lt;h2 id="data-structures">Data Structures&lt;/h2>
+&lt;p>In this tutorial, we will see &lt;code>Julia's&lt;/code> data structure. Namely,&lt;/p>
+&lt;ol>
+&lt;li>Tuple,&lt;/li>
+&lt;li>Array,&lt;/li>
+&lt;li>Dictionary, and&lt;/li>
+&lt;li>Set&lt;/li>
+&lt;/ol>
+&lt;h3 id="tuple">Tuple&lt;/h3>
+&lt;p>Lets first discuss about &lt;code>Tuple&lt;/code>. Tuple and Array can hold a list of elements. But the basic difference between them is, &lt;code>Tuple&lt;/code> is immutable. It means that, we can&amp;rsquo;t change the value of a tuple once it&amp;rsquo;s created. We can create a tuple by giving some ordered elements into a paranthesis &lt;code>( )&lt;/code>. The syntax of a tuple is as follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="p">(&lt;/span>&lt;span class="n">item1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">itme3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Let&amp;rsquo;s see an example. Suppose we want to create a tuple consists of some mixed values. We just give those values within a paranthesis &lt;code>( )&lt;/code> or just without the parenthesis. Both will work just fine. Then we can print the type of the tuple by using the &lt;code>typeof()&lt;/code> method. To access the elements of a tuple, we can use the index values of tuple, but keep in mind in &lt;code>Julia&lt;/code>, index starts from 1. So, in order to access the first element of tuple, we need to follow this syntax:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">tuple_name&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_input_">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">tup1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">4.5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="c">#this also works&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">tup2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;c&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">11&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mf">0.5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;World&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>(1, 2, 4.5, &amp;quot;Hello&amp;quot;)
+('c', 11, 0.5, &amp;quot;World&amp;quot;)
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-1">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Type of tup1: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">typeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup1&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Type of tup2: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">typeof&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup2&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-1">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Type of tup1: Tuple{Int64,Int64,Float64,String}
+Type of tup2: Tuple{Char,Int64,Float64,String}
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-2">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c">#accessing Elements&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">tup2&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="k">end&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-2">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>1
+World
+&lt;/code>&lt;/pre>
+&lt;p>As, we were saying earlier that, tuples are immuatble. That means, we can not change the elements of a tuple after it has been initialized. Let&amp;rsquo;s test that. We will try to change the third element of &lt;code>tup1&lt;/code>. And it will give an error.&lt;/p>
+&lt;h4 id="_input_-3">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">tup1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;c&amp;#39;&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-3">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>MethodError: no method matching setindex!(::Tuple{Int64,Int64,Float64,String}, ::Char, ::Int64)
+Stacktrace:
+[1] top-level scope at In[4]:1
+&lt;/code>&lt;/pre>
+&lt;p>There is an another version of tuples and it is called &lt;strong>NamedTuples&lt;/strong>. Here, we can assign an unique name to each elements of the tuple to access them.&lt;/p>
+&lt;p>To access by using its name we need to use the following syntax:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">tuple_name&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">variable_name&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_input_-4">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">named_tup&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">(&lt;/span>&lt;span class="n">lang&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="sc">&amp;#39;C&amp;#39;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">int_num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">float_num&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="mf">3.6&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of named_tuple: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">named_tup&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Accessing first element by index: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">named_tup&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Accessing first element by using variable name: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">named_tup&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">lang&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-4">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Elements of named_tuple: (lang = 'C', int_num = 1, float_num = 3.6)
+Accessing first element by index: C
+Accessing first element by using variable name: C
+&lt;/code>&lt;/pre>
+&lt;h3 id="array">Array&lt;/h3>
+&lt;p>Unlike Tuples, Arrays are mutable. So, after assigning values we can change them. We can declare an array in many ways. such as:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">array_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">item1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">array_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">item1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">array_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Array&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kt">DataType&lt;/span>&lt;span class="p">}([&lt;/span>&lt;span class="n">item1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here in the third syntax of declaring array, we can specify what kind of data we want to assign in our array. Lets, create three arrays using these syntax.&lt;/p>
+&lt;h4 id="_input_-5">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">arr1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">arr2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Array&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mf">2.5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Hello&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">arr3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Array&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kt">Int64&lt;/span>&lt;span class="p">}([&lt;/span>&lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">8&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of arr1: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">arr1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of arr2: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">arr2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of arr3: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">arr3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-5">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Elements of arr1: [1, 2, 3]
+Elements of arr2: Any[2.5, &amp;quot;Hello&amp;quot;, 100]
+Elements of arr3: [4, 6, 8]
+&lt;/code>&lt;/pre>
+&lt;p>These are the example of 1 dimensional array. The syntax of declaring 2 dimensional array is follows:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">array_2d&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="n">item1&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="n">item3&lt;/span> &lt;span class="n">item4&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="o">...&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Let&amp;rsquo;s create an array which has 3 row and 2 columns or an &lt;code>(3*2)&lt;/code> array.&lt;/p>
+&lt;h4 id="_input_-6">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">arr_2d&lt;/span> &lt;span class="o">=&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="mi">3&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">;&lt;/span> &lt;span class="mi">5&lt;/span> &lt;span class="mi">6&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">arr_2d&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-6">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>3×2 Array{Int64,2}:
+1 2
+3 4
+5 6
+&lt;/code>&lt;/pre>
+&lt;h4 id="array-operations">Array Operations&lt;/h4>
+&lt;p>To insert, delete or sort elements of an array we can use some built in methods like &lt;code>insert(), deleteat(), push(), pushfirst(), pop(), popfirst(), sort()&lt;/code>. Let&amp;rsquo;s use these methods. To insert elements in an array we can use &lt;code>push()&lt;/code>, &lt;code>pushfirst()&lt;/code> and &lt;code>insert()&lt;/code> methods. &lt;code>push()&lt;/code> method insert an element in the end of the array, &lt;code>pushfirst()&lt;/code> inserts an item at the begining of the array, and &lt;code>insert()&lt;/code> method insert an item into a given location. The syntax of &lt;code>insert()&lt;/code> method is&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">insert&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">arr_name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">position_to_insert&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">value&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Let&amp;rsquo;s first insert into an array.&lt;/p>
+&lt;h4 id="_input_-7">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">test_arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">]&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">push!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">100&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using push method: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pushfirst!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">12&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using pushfirst method: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">insert!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2525&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using insert method: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-7">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Array after using push method: [1, 2, 3, 4, 5, 100]
+Array after using pushfirst method: [12, 1, 2, 3, 4, 5, 100]
+Array after using insert method: [12, 1, 2525, 2, 3, 4, 5, 100]
+&lt;/code>&lt;/pre>
+&lt;p>To delete elements in an array, we can use &lt;code>pop()&lt;/code>, &lt;code>popfirst()&lt;/code> and &lt;code>deleteat()&lt;/code> methods. &lt;code>pop()&lt;/code> method deletes an element from the end of the array, &lt;code>popfirst()&lt;/code> deletes an item from the begining of the array, and &lt;code>deleteat()&lt;/code> method deletes an item from a given location. The syntax of &lt;code>deleteat()&lt;/code> method is&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">deleteat&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">arr_name&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">position_for_delete&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We will use the same array which we used with insertion methods.&lt;/p>
+&lt;h4 id="_input_-8">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array before deleting elements: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">pop!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using pop method: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">popfirst!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using popfirst method: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">deleteat!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">4&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Array after using deleteat method at the 4th index: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-8">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Array before deleting elements: [12, 1, 2525, 2, 3, 4, 5, 100]
+Array after using pop method: [12, 1, 2525, 2, 3, 4, 5]
+Array after using popfirst method: [1, 2525, 2, 3, 4, 5]
+Array after using deleteat method at the 4th index: [1, 2525, 2, 4, 5]
+&lt;/code>&lt;/pre>
+&lt;p>Besides these inserting and deletion methods, there are some methods for other helpful tasks. Here, we will try to mention some of the methods. For sorting we can use &lt;code>sort()&lt;/code> method. Also, if we want arrays of ones or zeros we can use &lt;code>ones()&lt;/code> and &lt;code>zeros()&lt;/code> method respectively. We can generate random number from uniform distribution using &lt;code>rand()&lt;/code> method. To create random number from normal distribution we can use &lt;code>randn()&lt;/code> method.&lt;/p>
+&lt;p>Let&amp;rsquo;s see them in action.&lt;/p>
+&lt;h4 id="_input_-9">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># sorting test_arr&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Before sorting the test_array: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">sort!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;After sorting the test_array: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">test_arr&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-9">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Before sorting the test_array: [1, 2525, 2, 4, 5]
+After sorting the test_array: [1, 2, 4, 5, 2525]
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-10">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># create an 2*3 array of ones&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ones_arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">ones&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">ones_arr&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-10">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>2×3 Array{Float64,2}:
+1.0 1.0 1.0
+1.0 1.0 1.0
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-11">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># create an 2*3 array of zeros&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zeros_arr&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">zeros&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">zeros_arr&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-11">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>2×3 Array{Float64,2}:
+0.0 0.0 0.0
+0.0 0.0 0.0
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-12">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># create an array size of 2*5 with random variable from uniform distribution &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">rand&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-12">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>2×5 Array{Float64,2}:
+0.451961 0.309916 0.193709 0.602781 0.160294
+0.737481 0.523093 0.662101 0.946056 0.804512
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-13">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># create an array size of 2*5 with random variable from normal distribution &lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">randn&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-13">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>2×5 Array{Float64,2}:
+0.907519 2.42625 0.909603 -0.420501 0.632623
+-1.78817 0.63605 0.17628 0.419475 -0.200928
+&lt;/code>&lt;/pre>
+&lt;h3 id="dictionary">Dictionary&lt;/h3>
+&lt;p>Dictionary is a collection of key-value pairs, where we can access the value using its key. We can declare dictionary in the following three ways:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">key1&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="n">value1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">key2&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="n">value2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">....&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kt">key_datatype&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">value_datatype&lt;/span>&lt;span class="p">}(&lt;/span>&lt;span class="n">key1&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="n">value1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">key2&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="n">value2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">....&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here in the third syntax of declaring dictionary, we can specify the data types of keys and values.&lt;/p>
+&lt;h4 id="_input_-14">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">()&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;Bangladesh&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Dhaka&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict1&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;Sweden&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="s">&amp;#34;Stockholm&amp;#34;&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of dict1: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dict1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Apple&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s">&amp;#34;Red&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Orange&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s">&amp;#34;Orange&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Banana&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="s">&amp;#34;Yellow&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of dict2: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dict2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">dict3&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Dict&lt;/span>&lt;span class="p">{&lt;/span>&lt;span class="kt">String&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="kt">Int64&lt;/span>&lt;span class="p">}(&lt;/span>&lt;span class="s">&amp;#34;One&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Two&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;Three&amp;#34;&lt;/span> &lt;span class="o">=&amp;gt;&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Elements of dict3: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">dict3&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-14">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Elements of dict1: Dict{Any,Any}(&amp;quot;Bangladesh&amp;quot; =&amp;gt; &amp;quot;Dhaka&amp;quot;,&amp;quot;Sweden&amp;quot; =&amp;gt; &amp;quot;Stockholm&amp;quot;)
+Elements of dict2: Dict(&amp;quot;Apple&amp;quot; =&amp;gt; &amp;quot;Red&amp;quot;,&amp;quot;Orange&amp;quot; =&amp;gt; &amp;quot;Orange&amp;quot;,&amp;quot;Banana&amp;quot; =&amp;gt; &amp;quot;Yellow&amp;quot;)
+Elements of dict3: Dict(&amp;quot;One&amp;quot; =&amp;gt; 1,&amp;quot;Two&amp;quot; =&amp;gt; 2,&amp;quot;Three&amp;quot; =&amp;gt; 3)
+&lt;/code>&lt;/pre>
+&lt;h4 id="accessing-dictionary-elements">Accessing Dictionary Elements&lt;/h4>
+&lt;p>To access the elements of dictionary we need to access them via their key. Suppose in &lt;code>dict3&lt;/code>, we want to access the value &lt;code>3&lt;/code>. So, we can do that by this:&lt;/p>
+&lt;h4 id="_input_-15">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dict3&lt;/span>&lt;span class="p">[&lt;/span>&lt;span class="s">&amp;#34;Three&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-15">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>3
+&lt;/code>&lt;/pre>
+&lt;p>Also, we can access the keys and values of a dictionary seperately by using &lt;code>keys()&lt;/code> and &lt;code>values()&lt;/code> method respectively.&lt;/p>
+&lt;h4 id="_input_-16">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Keys of dict3: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">keys&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dict3&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Values of dict3: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">values&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">dict3&lt;/span>&lt;span class="p">))&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-16">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Keys of dict3: [&amp;quot;One&amp;quot;, &amp;quot;Two&amp;quot;, &amp;quot;Three&amp;quot;]
+Values of dict3: [1, 2, 3]
+&lt;/code>&lt;/pre>
+&lt;h3 id="set">Set&lt;/h3>
+&lt;p>Another data structure of &lt;code>julia&lt;/code> is &lt;code>set&lt;/code>. &lt;code>Set&lt;/code> is like &lt;code>array&lt;/code>, its mutable. But the basic difference between them is, &lt;code>set&lt;/code> holds only &lt;code>unique element&lt;/code>. So, there will be no duplicate element in a &lt;code>set&lt;/code>. And the basic syntax of a set is:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">set_name&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Set&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="n">item1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">item3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="o">....&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We can do operations like union, intersection, difference between two sets using &lt;code>union()&lt;/code>, &lt;code>intersect()&lt;/code>, and &lt;code>setdiff()&lt;/code> methods respectively. Also we can check if one set is subset of another one by using &lt;code>issubset()&lt;/code> function.&lt;/p>
+&lt;p>Here we will create 2 sets and apply these functions on them.&lt;/p>
+&lt;h4 id="_input_-17">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">set1&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Set&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">3&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;new&amp;#34;&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Set1: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">set2&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="kt">Set&lt;/span>&lt;span class="p">([&lt;/span>&lt;span class="mi">5&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="mi">2&lt;/span>&lt;span class="p">])&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">println&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="s">&amp;#34;Set1: &amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-17">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set1: Set(Any[&amp;quot;new&amp;quot;, 2, 3, 5, 1])
+Set1: Set([2, 5])
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-18">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># union between two sets&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">union&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-18">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set{Any} with 5 elements:
+&amp;quot;new&amp;quot;
+2
+3
+5
+1
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-19">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># intersection between two sets&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">intersect&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-19">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set{Any} with 2 elements:
+2
+5
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-20">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># set difference between two sets&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">setdiff&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set2&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-20">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set{Any} with 3 elements:
+&amp;quot;new&amp;quot;
+3
+1
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-21">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="c"># Checking if set2 is subset of set1&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">issubset&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set2&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="n">set1&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-21">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>true
+&lt;/code>&lt;/pre>
+&lt;p>As, set is mutable, we can add or delete elements from it. To add elements we can use &lt;code>push()&lt;/code> method and to delete elements we can use &lt;code>delete()&lt;/code> method. For deletion, we need to tell specifically which element from a set we want to delete.&lt;/p>
+&lt;h4 id="_input_-22">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">push!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hello&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-22">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set{Any} with 6 elements:
+&amp;quot;new&amp;quot;
+2
+3
+&amp;quot;hello&amp;quot;
+5
+1
+&lt;/code>&lt;/pre>
+&lt;h4 id="_input_-23">&lt;em>input&lt;/em>&lt;/h4>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-julia" data-lang="julia">&lt;span class="line">&lt;span class="cl">&lt;span class="n">delete!&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="n">set1&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s">&amp;#34;hello&amp;#34;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="_output_-23">&lt;em>output&lt;/em>&lt;/h4>
+&lt;pre>&lt;code>Set{Any} with 5 elements:
+&amp;quot;new&amp;quot;
+2
+3
+5
+1
+&lt;/code>&lt;/pre>
+&lt;p>So, thats it.&lt;/p>
+&lt;p>Keep Practicing.&lt;/p>
+&lt;p>Good luck, May the Julia be with you!!&lt;/p>
+&lt;hr>
+&lt;p>&lt;strong>Other posts in this series:&lt;/strong>&lt;/p>
+&lt;ol>
+&lt;li>&lt;a href="https://fahim-sikder.github.io/post/julia-tutorial-part-1/">Julia Tutorial Part 1: Installations &amp;amp; Basics&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

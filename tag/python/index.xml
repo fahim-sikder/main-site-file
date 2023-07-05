@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>python | Md Fahim Sikder</title><link>https://fahim-sikder.github.io/tag/python/</link><atom:link href="https://fahim-sikder.github.io/tag/python/index.xml" rel="self" type="application/rss+xml"/><description>python</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Sat, 26 Dec 2020 08:21:34 +0100</lastBuildDate><image><url>https://fahim-sikder.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>python</title><link>https://fahim-sikder.github.io/tag/python/</link></image><item><title>Installing Docker, Creating &amp; Running First Python Script Using it on Ubuntu 20.04 LTS</title><link>https://fahim-sikder.github.io/post/install-docker-ubuntu/</link><pubDate>Sat, 26 Dec 2020 08:21:34 +0100</pubDate><guid>https://fahim-sikder.github.io/post/install-docker-ubuntu/</guid><description>&lt;p>I always get in trouble when creating a new project with different dependencies installed on my machine. I had to reinstall new libraries, which is doing a new thing repeatedly, and it&amp;rsquo;s time-consuming. Then I learned about docker. Docker will allow you to create a virtual machine to install all your dependencies for your specific project without tempering your primary system. Still, it is faster than the virtual machine. In this tutorial, we are going to see:&lt;/p>
+&lt;ol>
+&lt;li>Installing docker on ubuntu 20.04 LTS&lt;/li>
+&lt;li>Creating and running a python script using docker image&lt;/li>
+&lt;/ol>
+&lt;h2 id="installing-docker">Installing Docker&lt;/h2>
+&lt;p>For installing docker from the website for the different OS, you can visit &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">here.&lt;/a> First of all, we are going to uninstall previously installed docker (if have any). We will run the following command in the terminal to do that:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="setting-up-the-repository">Setting up the Repository&lt;/h4>
+&lt;p>Then we need to update the &lt;code>apt&lt;/code> packages and install the following dependencies by running the commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get install &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>&lt;span class="go"> apt-transport-https \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> ca-certificates \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> curl \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> gnupg-agent \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> software-properties-common
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we need to add the Docker&amp;rsquo;s official GPG key to the system.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> curl -fsSL https://download.docker.com/linux/ubuntu/gpg &lt;span class="p">|&lt;/span> sudo apt-key add -
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We will use the following command to set up the stable repository.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo add-apt-repository &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>&lt;span class="go"> &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> $(lsb_release -cs) \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> stable&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="installing-docker-engine">Installing Docker Engine&lt;/h4>
+&lt;p>To install the docker engine first we have to update the &lt;code>apt&lt;/code> package again and run the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, the docker should be installed in our system, but before we test it, first we need to add the docker into usergroup, otherwise in some system it will give error. We can do this by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo groupadd docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo usermod -a -G docker &lt;span class="si">${&lt;/span>&lt;span class="nv">USER&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> grep docker /etc/group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> newgrp docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After running this command, &lt;strong>you have to logout or restart the pc&lt;/strong>. Then run the following command to test the docker system.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo docker run hello-world
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will download a test container and print some messages and then it will exit.&lt;/p>
+&lt;h2 id="creating-first-docker-script">Creating First Docker Script&lt;/h2>
+&lt;p>Now, it&amp;rsquo;s time to create our first program that will run on docker. Here we will create a simple script that will measure the square root of a number using the python&amp;rsquo;s &lt;code>NumPy&lt;/code> library. So, in this program, we have a dependency, and that is NumPy. We have to install the dependency inside our docker container. First, we will create a folder containing all the necessary things such as python file, docker image etc.&lt;/p>
+&lt;p>Then we will create the python script which we will run, let&amp;rsquo;s name it &lt;code>main.py&lt;/code> and write the following code into that.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;The square root of 16 is &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, let&amp;rsquo;s create a file name &lt;code>Dockerfile&lt;/code>. This file is the blueprint of the docker image. &lt;em>&amp;ldquo;A docker image is a combination of a file system and &lt;a href="https://searchitoperations.techtarget.com/definition/Docker-image" target="_blank" rel="noopener">parameters&lt;/a>.&amp;rdquo;&lt;/em> In other words, this file will contain the information on the working environment, dependencies etc. of our docker app. And the docker container (it&amp;rsquo;s an instance of docker image) will run the docker system.&lt;/p>
+&lt;p>Let&amp;rsquo;s put the following lines in the &lt;code>Dockerfile&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-docker" data-lang="docker">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> python:3.8&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ADD&lt;/span> main.py .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> pip install numpy&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;main.py&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, let&amp;rsquo;s understand what these lines represent. The docker needs an environment where the docker will run, and this environment can be an operating system, a software package, a python environment etc. Here we are using Python version 3.8 as our environment. By executing &lt;code>FROM python:3.8&lt;/code> line, the docker container pulls python version 3.8 from the docker &lt;a href="https://hub.docker.com/" target="_blank" rel="noopener">hub&lt;/a>. To add the python script in the docker current directory, we will use &lt;code>ADD main.py .&lt;/code> line. The &lt;code>.&lt;/code> specifies the current directory. Now, we will be going to install the dependencies, in the python script we have only one dependency, and that is numpy. So to install the NumPy dependency, we are using &lt;code>RUN pip install numpy&lt;/code>. If your program has other dependencies, you can add them in this line. And finally, to run the python script, we will use &lt;code>CMD&lt;/code> command. Usually, we run a python script in the terminal by using &lt;code>python main.py&lt;/code> command. Just like this, we will pass this command into a tokenized list with the &lt;code>CMD&lt;/code> command. So, &lt;code>CMD [&amp;quot;python&amp;quot;, &amp;quot;main.py&amp;quot;]&lt;/code> will run the python script inside the docker container.&lt;/p>
+&lt;h4 id="building-the-docker-image">Building the Docker Image&lt;/h4>
+&lt;p>We have the &lt;code>Dockerfile&lt;/code> ready, and we now know what it contains and what the lines inside the &lt;code>Dockerfile&lt;/code> does, it is time to build the docker image! To build the docker image, we need to give the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> docker build -t first-docker .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here &lt;code>first-docker&lt;/code> is our docker image name. We can name it whatever we want. And the &lt;code>-t&lt;/code> argument is used for tagging the resulting image. After running this command, it will look like the following screenshot.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Build Docker" srcset="
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1d82e5028a530ef5d8618186d6ee2b37.webp 400w,
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_ddc0ed44380bbfce4542de2fb25f1dce.webp 760w,
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://fahim-sikder.github.io/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1d82e5028a530ef5d8618186d6ee2b37.webp"
+width="760"
+height="635"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="running-the-docker-image">Running the Docker Image&lt;/h4>
+&lt;p>So, our docker image is now ready. To run our image we need to give the following command in the terminal:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> docker run first-docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This command will run the docker image and give the output of the python script we have written. In our case, we have calculated the square root of 16 using NumPy&amp;rsquo;s sqrt function. So we will see the result like the following screenshot.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Run Docker" srcset="
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_98b3d4bad82ccaa93435fa2bdce01d62.webp 400w,
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_fceacf6826302d1c0d4201263da77f4d.webp 760w,
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://fahim-sikder.github.io/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_98b3d4bad82ccaa93435fa2bdce01d62.webp"
+width="658"
+height="155"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Congratulations! We have just run our first docker app. We can do more complex things with docker, keep digging. The code for this tutorial can be found in &lt;a href="https://github.com/fahim-sikder/docker-tutorial" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Have fun and Stay Safe!&lt;/p>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">Docker official installation procedure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

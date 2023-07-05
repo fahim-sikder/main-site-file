@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>ubuntu | Md Fahim Sikder</title><link>https://fahim-sikder.github.io/tag/ubuntu/</link><atom:link href="https://fahim-sikder.github.io/tag/ubuntu/index.xml" rel="self" type="application/rss+xml"/><description>ubuntu</description><generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><lastBuildDate>Fri, 01 Oct 2021 10:29:54 +0200</lastBuildDate><image><url>https://fahim-sikder.github.io/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>ubuntu</title><link>https://fahim-sikder.github.io/tag/ubuntu/</link></image><item><title>Installing Texlive Latest Version (Texlive-2021) on Ubuntu-20.04/18.04</title><link>https://fahim-sikder.github.io/post/installing-texlive-latest-ubuntu/</link><pubDate>Fri, 01 Oct 2021 10:29:54 +0200</pubDate><guid>https://fahim-sikder.github.io/post/installing-texlive-latest-ubuntu/</guid><description>&lt;p>Hello there! In this tutorial, we will learn how to install the latest version of texlive in the ubuntu system! Generally, Ubuntu 20.04 / 18.04 only install Texlive-version-2019 from the local repository! But the Texlive current version is 2021! So, a lot happened in these updates. So, we need to install the 2021 version from the source! But before we do that, we have to uninstall any existing Texlive installation.&lt;/p>
+&lt;h3 id="uninstalling-existing-texlive">Uninstalling existing Texlive&lt;/h3>
+&lt;p>Use the following command from the terminal to remove the existing installation of Texlive [3].&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get purge texlive*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /usr/local/texlive/*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> rm -rf ~/.texlive*
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /usr/local/share/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /var/lib/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo rm -rf /etc/texmf
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> sudo apt-get remove tex-common --purge
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="gp">$&lt;/span> rm -rf ~/.texlive
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>These commands should remove delete any existing texlive installation.&lt;/p>
+&lt;h3 id="installing-texlive-2021">Installing Texlive-2021&lt;/h3>
+&lt;p>Now it&amp;rsquo;s time for install the Texlive latest version! But first, we have to install some dependency [2]!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install wget perl-tk
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We need to get the official installer for Texlive. We can do that by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> wget http://mirror.ctan.org/systems/texlive/tlnet/install-tl-unx.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> tar -xzf install-tl-unx.tar.gz
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> &lt;span class="nb">cd&lt;/span> install-tl-****
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here, **** means the version of the installer! Replace the **** according to your downloaded filename. After changing the directory to the downloaded folder, run the installer by using:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo ./install-tl
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Installation of the latest version of the texlive should start. After the installation, we need to add the installation path with variables to the &lt;code>.bashrc&lt;/code> file.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo vim ~/.bashrc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Add the following variables to the file:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">export PATH=/usr/local/texlive/2021/bin/x86_64-linux${PATH:+:${PATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">export INFOPATH=/usr/local/texlive/2021/texmf-dist/doc/info${INFOPATH:+:${INFOPATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">export MANPATH=/usr/local/texlive/2021/texmf-dist/doc/man${MANPATH:+:${MANPATH}}
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After this, texlive should be installed in the system. We can check it by typing &lt;code>which tex&lt;/code> in the terminal. It should return the path where texlive is installed! Now we have to make sure that Ubuntu thinks we have installed texlive. We can do that by installing the &lt;code>equivs&lt;/code> package!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install equivs --no-install-recommends freeglut3
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> wget -O debian-equivs-2021-ex.txt https://www.tug.org/texlive/files/debian-equivs-2021-ex.txt
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We are using the &lt;code>debian-equivs-2021-ex.txt&lt;/code> file to build a &lt;code>.deb&lt;/code> file to install the necessary packages. To build the file and install it follow this:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> equivs-build debian-equivs-2021-ex.txt
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo dpkg -i texlive-local_2021.99999999-1_all.deb
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt install -f
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After this, Texlive should be working just fine in Ubuntu!&lt;/p>
+&lt;p>Enjoy!&lt;/p>
+&lt;h3 id="common-issues-in-installation">Common Issues in Installation&lt;/h3>
+&lt;h4 id="installing-packages-using-texlive-manager-tlmgr">Installing Packages Using Texlive Manager (tlmgr)&lt;/h4>
+&lt;p>If we need to install / update packages in our texlive installations, we can use the &lt;code>Texlive manager (tlmgr)&lt;/code>. We can open the &lt;code>tlmgr&lt;/code> by typing the following in the terminal:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo tlmgr --gui
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>But sometimes, it can give the error, such as: &lt;code>tlmgr: command not found&lt;/code>. If this happens, do the following to open the texlive manager [2]:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo env &lt;span class="nv">PATH&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span>&lt;span class="nv">$PATH&lt;/span>&lt;span class="s2">&amp;#34;&lt;/span> tlmgr --gui
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, it should work!&lt;/p>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://www.tug.org/texlive/doc/texlive-en/texlive-en.pdf" target="_blank" rel="noopener">Texlive Official Guide 2021&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tex.stackexchange.com/questions/1092/how-to-install-vanilla-texlive-on-debian-or-ubuntu" target="_blank" rel="noopener">Post about installing Texlive: Answer Section&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://tex.stackexchange.com/questions/95483/how-to-remove-everything-related-to-tex-live-for-fresh-install-on-ubuntu" target="_blank" rel="noopener">Post about removing Texlive: Answer Section&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>Installing Docker, Creating &amp; Running First Python Script Using it on Ubuntu 20.04 LTS</title><link>https://fahim-sikder.github.io/post/install-docker-ubuntu/</link><pubDate>Sat, 26 Dec 2020 08:21:34 +0100</pubDate><guid>https://fahim-sikder.github.io/post/install-docker-ubuntu/</guid><description>&lt;p>I always get in trouble when creating a new project with different dependencies installed on my machine. I had to reinstall new libraries, which is doing a new thing repeatedly, and it&amp;rsquo;s time-consuming. Then I learned about docker. Docker will allow you to create a virtual machine to install all your dependencies for your specific project without tempering your primary system. Still, it is faster than the virtual machine. In this tutorial, we are going to see:&lt;/p>
+&lt;ol>
+&lt;li>Installing docker on ubuntu 20.04 LTS&lt;/li>
+&lt;li>Creating and running a python script using docker image&lt;/li>
+&lt;/ol>
+&lt;h2 id="installing-docker">Installing Docker&lt;/h2>
+&lt;p>For installing docker from the website for the different OS, you can visit &lt;a href="https://docs.docker.com/get-docker/" target="_blank" rel="noopener">here.&lt;/a> First of all, we are going to uninstall previously installed docker (if have any). We will run the following command in the terminal to do that:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get remove docker docker-engine docker.io containerd runc
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="setting-up-the-repository">Setting up the Repository&lt;/h4>
+&lt;p>Then we need to update the &lt;code>apt&lt;/code> packages and install the following dependencies by running the commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get install &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>&lt;span class="go"> apt-transport-https \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> ca-certificates \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> curl \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> gnupg-agent \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> software-properties-common
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now we need to add the Docker&amp;rsquo;s official GPG key to the system.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> curl -fsSL https://download.docker.com/linux/ubuntu/gpg &lt;span class="p">|&lt;/span> sudo apt-key add -
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>We will use the following command to set up the stable repository.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo add-apt-repository &lt;span class="se">\
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="se">&lt;/span>&lt;span class="go"> &amp;#34;deb [arch=amd64] https://download.docker.com/linux/ubuntu \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> $(lsb_release -cs) \
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go"> stable&amp;#34;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h4 id="installing-docker-engine">Installing Docker Engine&lt;/h4>
+&lt;p>To install the docker engine first we have to update the &lt;code>apt&lt;/code> package again and run the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get update
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo apt-get install docker-ce docker-ce-cli containerd.io
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, the docker should be installed in our system, but before we test it, first we need to add the docker into usergroup, otherwise in some system it will give error. We can do this by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo groupadd docker
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo usermod -a -G docker &lt;span class="si">${&lt;/span>&lt;span class="nv">USER&lt;/span>&lt;span class="si">}&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> grep docker /etc/group
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> newgrp docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>After running this command, &lt;strong>you have to logout or restart the pc&lt;/strong>. Then run the following command to test the docker system.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> sudo docker run hello-world
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This will download a test container and print some messages and then it will exit.&lt;/p>
+&lt;h2 id="creating-first-docker-script">Creating First Docker Script&lt;/h2>
+&lt;p>Now, it&amp;rsquo;s time to create our first program that will run on docker. Here we will create a simple script that will measure the square root of a number using the python&amp;rsquo;s &lt;code>NumPy&lt;/code> library. So, in this program, we have a dependency, and that is NumPy. We have to install the dependency inside our docker container. First, we will create a folder containing all the necessary things such as python file, docker image etc.&lt;/p>
+&lt;p>Then we will create the python script which we will run, let&amp;rsquo;s name it &lt;code>main.py&lt;/code> and write the following code into that.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-python" data-lang="python">&lt;span class="line">&lt;span class="cl">&lt;span class="kn">import&lt;/span> &lt;span class="nn">numpy&lt;/span> &lt;span class="k">as&lt;/span> &lt;span class="nn">np&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="n">a&lt;/span> &lt;span class="o">=&lt;/span> &lt;span class="n">np&lt;/span>&lt;span class="o">.&lt;/span>&lt;span class="n">sqrt&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="mi">16&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="nb">print&lt;/span>&lt;span class="p">(&lt;/span>&lt;span class="sa">f&lt;/span>&lt;span class="s1">&amp;#39;The square root of 16 is &lt;/span>&lt;span class="si">{&lt;/span>&lt;span class="n">a&lt;/span>&lt;span class="si">}&lt;/span>&lt;span class="s1">&amp;#39;&lt;/span>&lt;span class="p">)&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, let&amp;rsquo;s create a file name &lt;code>Dockerfile&lt;/code>. This file is the blueprint of the docker image. &lt;em>&amp;ldquo;A docker image is a combination of a file system and &lt;a href="https://searchitoperations.techtarget.com/definition/Docker-image" target="_blank" rel="noopener">parameters&lt;/a>.&amp;rdquo;&lt;/em> In other words, this file will contain the information on the working environment, dependencies etc. of our docker app. And the docker container (it&amp;rsquo;s an instance of docker image) will run the docker system.&lt;/p>
+&lt;p>Let&amp;rsquo;s put the following lines in the &lt;code>Dockerfile&lt;/code>.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-docker" data-lang="docker">&lt;span class="line">&lt;span class="cl">&lt;span class="k">FROM&lt;/span>&lt;span class="s"> python:3.8&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">ADD&lt;/span> main.py .&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">RUN&lt;/span> pip install numpy&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="err">&lt;/span>&lt;span class="k">CMD&lt;/span> &lt;span class="p">[&lt;/span>&lt;span class="s2">&amp;#34;python&amp;#34;&lt;/span>&lt;span class="p">,&lt;/span> &lt;span class="s2">&amp;#34;main.py&amp;#34;&lt;/span>&lt;span class="p">]&lt;/span>&lt;span class="err">
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, let&amp;rsquo;s understand what these lines represent. The docker needs an environment where the docker will run, and this environment can be an operating system, a software package, a python environment etc. Here we are using Python version 3.8 as our environment. By executing &lt;code>FROM python:3.8&lt;/code> line, the docker container pulls python version 3.8 from the docker &lt;a href="https://hub.docker.com/" target="_blank" rel="noopener">hub&lt;/a>. To add the python script in the docker current directory, we will use &lt;code>ADD main.py .&lt;/code> line. The &lt;code>.&lt;/code> specifies the current directory. Now, we will be going to install the dependencies, in the python script we have only one dependency, and that is numpy. So to install the NumPy dependency, we are using &lt;code>RUN pip install numpy&lt;/code>. If your program has other dependencies, you can add them in this line. And finally, to run the python script, we will use &lt;code>CMD&lt;/code> command. Usually, we run a python script in the terminal by using &lt;code>python main.py&lt;/code> command. Just like this, we will pass this command into a tokenized list with the &lt;code>CMD&lt;/code> command. So, &lt;code>CMD [&amp;quot;python&amp;quot;, &amp;quot;main.py&amp;quot;]&lt;/code> will run the python script inside the docker container.&lt;/p>
+&lt;h4 id="building-the-docker-image">Building the Docker Image&lt;/h4>
+&lt;p>We have the &lt;code>Dockerfile&lt;/code> ready, and we now know what it contains and what the lines inside the &lt;code>Dockerfile&lt;/code> does, it is time to build the docker image! To build the docker image, we need to give the following command:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> docker build -t first-docker .
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Here &lt;code>first-docker&lt;/code> is our docker image name. We can name it whatever we want. And the &lt;code>-t&lt;/code> argument is used for tagging the resulting image. After running this command, it will look like the following screenshot.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Build Docker" srcset="
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1d82e5028a530ef5d8618186d6ee2b37.webp 400w,
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_ddc0ed44380bbfce4542de2fb25f1dce.webp 760w,
+/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://fahim-sikder.github.io/post/install-docker-ubuntu/build_hu34424acdaa48457dcc75561f9fd871b4_123340_1d82e5028a530ef5d8618186d6ee2b37.webp"
+width="760"
+height="635"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h4 id="running-the-docker-image">Running the Docker Image&lt;/h4>
+&lt;p>So, our docker image is now ready. To run our image we need to give the following command in the terminal:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="gp">$&lt;/span> docker run first-docker
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This command will run the docker image and give the output of the python script we have written. In our case, we have calculated the square root of 16 using NumPy&amp;rsquo;s sqrt function. So we will see the result like the following screenshot.&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Run Docker" srcset="
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_98b3d4bad82ccaa93435fa2bdce01d62.webp 400w,
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_fceacf6826302d1c0d4201263da77f4d.webp 760w,
+/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_1200x1200_fit_q75_h2_lanczos_3.webp 1200w"
+src="https://fahim-sikder.github.io/post/install-docker-ubuntu/run_hu15eac8b91ece8f57e05260ccb59d230d_11235_98b3d4bad82ccaa93435fa2bdce01d62.webp"
+width="658"
+height="155"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;p>Congratulations! We have just run our first docker app. We can do more complex things with docker, keep digging. The code for this tutorial can be found in &lt;a href="https://github.com/fahim-sikder/docker-tutorial" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Have fun and Stay Safe!&lt;/p>
+&lt;h3 id="reference">Reference&lt;/h3>
+&lt;ol>
+&lt;li>&lt;a href="https://docs.docker.com/engine/install/" target="_blank" rel="noopener">Docker official installation procedure&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://hub.docker.com/" target="_blank" rel="noopener">Docker Hub&lt;/a>&lt;/li>
+&lt;/ol></description></item><item><title>How to Install R and two most popular R packages (tidyverse &amp; rstan) in Ubuntu 20.04 LTS</title><link>https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/</link><pubDate>Sun, 06 Sep 2020 20:39:11 +0600</pubDate><guid>https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/</guid><description>&lt;p>Hello there! In this post, we are going to see how we can install &lt;code>R&lt;/code> in our Ubuntu 20.04 LTS. Also, we will install two of R&amp;rsquo;s popular packages, namely: &lt;a href="https://www.tidyverse.org/" target="_blank" rel="noopener">tidyverse&lt;/a> &amp;amp; &lt;a href="https://mc-stan.org/users/interfaces/rstan" target="_blank" rel="noopener">rstan&lt;/a>. Both of these packages are important tools for data scientists. Rstan is the R interface for &lt;a href="https://mc-stan.org/" target="_blank" rel="noopener">stan&lt;/a>, which is the state-of-the-art platform for statistical modeling and high-performance statistical computation. I faced so much difficulty installing these. So, I decided to make it simple for you guys.&lt;/p>
+&lt;h3 id="installing-r">Installing R&lt;/h3>
+&lt;p>First, let&amp;rsquo;s install the &lt;code>R&lt;/code> in our system. We will install R from &lt;a href="https://cran.r-project.org/" target="_blank" rel="noopener">CRAN&lt;/a> repository. We need to install some dependencies for adding a new repository over HTTPS. To do that, we will run the following command in our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install dirmngr gnupg apt-transport-https ca-certificates software-properties-common
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then, we need to add the CRAN repository to our system sources’ list. We can do that by typing the following commands into our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo add-apt-repository &amp;#39;deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/&amp;#39;
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Finally, we will install R by using the following command.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install r-base
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, the R should be installed in our system. To check that, we can run the following command into our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">R
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If R is installed correctly, the console will show something like this:&lt;/p>
+&lt;p>
+&lt;figure >
+&lt;div class="d-flex justify-content-center">
+&lt;div class="w-100" >&lt;img alt="Figure 1" srcset="
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_f03b895017f58720e72a0970f2cfa6db.webp 400w,
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_abe9c8a2ebe5f16b87f4e63c9aed8aee.webp 760w,
+/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_1200x1200_fit_q75_h2_lanczos.webp 1200w"
+src="https://fahim-sikder.github.io/post/how-to-install-r-ubuntu-20/r_hufd30d648919556e88c13f92b33f4636e_49944_f03b895017f58720e72a0970f2cfa6db.webp"
+width="731"
+height="388"
+loading="lazy" data-zoomable />&lt;/div>
+&lt;/div>&lt;/figure>
+&lt;/p>
+&lt;h3 id="installing-tidyverse">Installing tidyverse&lt;/h3>
+&lt;p>Now, we will install the tidyverse packages. &lt;strong>Please note that we need to install &lt;code>tidyverse&lt;/code> first then install &lt;code>rstan&lt;/code>, because &lt;code>rstan&lt;/code> requires some dependencies. By installing &lt;code>tidyverse&lt;/code> first, it will make the job easier.&lt;/strong> First of all, we need to install some dependencies by typing the following commands in our terminal.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo apt-get install -y libxml2-dev libcurl4-openssl-dev libssl-dev libv8-dev
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Then install &lt;code>tidyverse&lt;/code> by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo R
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">install.packages(&amp;#39;tidyverse&amp;#39;)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>It will take some time to get installed. After installation, exit from the &lt;code>r&lt;/code> environment using the &lt;code>q()&lt;/code> function and be sure to save the environment when prompted.&lt;/p>
+&lt;h3 id="installing-rstan">Installing rstan&lt;/h3>
+&lt;p>To install the rstan, we need first check if our system has rstan already installed. If it has, then we need to remove it. We can do this by using the following commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">remove.packages(&amp;#34;rstan&amp;#34;)
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">if (file.exists(&amp;#34;.RData&amp;#34;)) file.remove(&amp;#34;.RData&amp;#34;)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Now, we need to check the c++ toolchain. We can do that by using these commands:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">sudo R
+&lt;/span>&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="go">pkgbuild::has_build_tools(debug = TRUE)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>This command will check if the installed c++ is using the pkgbuild package. The system will give the output &lt;code>TRUE&lt;/code> if it is using the pkgbuild package. Otherwise, we need to follow instructions from &lt;a href="https://github.com/stan-dev/rstan/wiki/Installing-RStan-on-Linux" target="_blank" rel="noopener">here&lt;/a>.&lt;/p>
+&lt;p>Now, run the following command to install rstan.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-console" data-lang="console">&lt;span class="line">&lt;span class="cl">&lt;span class="go">install.packages(&amp;#34;rstan&amp;#34;, repos = &amp;#34;https://cloud.r-project.org/&amp;#34;, dependencies = TRUE)
+&lt;/span>&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Again, it will take some time to get installed. After the installations, exit from the &lt;code>r&lt;/code> environment using &lt;code>q()&lt;/code> function and be sure to save the environment when prompted.&lt;/p>
+&lt;p>Happy Coding!!!&lt;/p>
+&lt;h4 id="references">References&lt;/h4>
+&lt;ol>
+&lt;li>&lt;a href="https://linuxize.com/post/how-to-install-r-on-ubuntu-20-04/" target="_blank" rel="noopener">Blog post on installing R&lt;/a>&lt;/li>
+&lt;li>&lt;a href="https://github.com/stan-dev/rstan/wiki/RStan-Getting-Started" target="_blank" rel="noopener">Official instruction of installing rstan&lt;/a>&lt;/li>
+&lt;/ol></description></item></channel></rss>

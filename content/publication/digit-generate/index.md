@@ -26,7 +26,7 @@ abstract = "Handwritten digit or numeral recognition is one of the classical iss
 abstract_short = ""
 
 # Is this a featured publication? (true/false)
-featured = true
+featured = false
 
 # Projects (optional).
 #   Associate this publication with one or more of your projects.

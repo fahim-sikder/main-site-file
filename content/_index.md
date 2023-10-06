@@ -257,6 +257,7 @@ sections:
       title: Achievements
       subtitle: 
       text: |-
+        - **Call to Arms Award (Reviewer)**, 26th European Conference on Artificial Intelligence (ECAI 2023), 2023
         - **Finalist**, Student Project Competition, Linköping Hockey Analytics Conference (LINHAC) 2022, 2022
         - NVIDIA GPU Grant, NVIDIA, 2018
         - **Champion**, NASA Space Apps Challenge 2016, Rajshahi Region, Bangladesh, 2016

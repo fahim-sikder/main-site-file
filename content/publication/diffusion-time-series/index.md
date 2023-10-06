@@ -16,7 +16,7 @@ publishDate: 2023-01-14T01:55:53+01:00
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Under review"
+publication: "Under Review"
 publication_short: ""
 
 abstract: ""

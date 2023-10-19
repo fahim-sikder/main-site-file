@@ -87,8 +87,8 @@ email: ''
 highlight_name: true
 ---
 
-Md Fahim Sikder is a Ph.D. student who works on **Explainable Synthetic Time-Series Data Generation with Privacy and Fairness** under the supervision of Professor [Fredrik Heintz](https://www.ida.liu.se/~frehe08/) at Reasoning and Learning (ReaL) Lab, IDA, Linköping University, Sweden. Fahim was a Lecturer in the Computer Science and Engineering department at the Institute of Science, Trade, and Technology (ISTT). In addition, he was the Coordinator of the HEAP Programming Club, ISTT, and Coach of the ACM ICPC team in ISTT.
+Md Fahim Sikder is currently pursuing his Ph.D. under the guidance of Professor [Fredrik Heintz](https://www.ida.liu.se/~frehe08/) at the Reasoning and Learning (ReaL) Lab, IDA, Linköping University, Sweden. His research focuses on developing Explainable Synthetic Time-Series Data Generation techniques while ensuring privacy and fairness. Before this, Fahim served as a Lecturer in the Computer Science and Engineering department at the Institute of Science, Trade, and Technology (ISTT). He also took on the roles of Coordinator of the HEAP Programming Club and Coach of the ACM ICPC team at ISTT.
 
-His research interests include Deep Learning, Generative Models, Time-Series Generation, Data Privacy.
+Fahim's research interests include Deep Learning, Generative Models, Time-Series Generation, Data Privacy.
 
 Md Fahim Sikder conducted several workshops and seminars, including a Workshop on Latex and a Week-long training course on Python (Beginning to Advance including Machine Learning). He participated in several National and International Contests. He achieved many titles, including “Champion at International Contest on Programming and System Development (ICPSD), 2014”, and “Champion at NASA SPACE APPS CHALLENGE 2016” in Rajshahi Region, Bangladesh.

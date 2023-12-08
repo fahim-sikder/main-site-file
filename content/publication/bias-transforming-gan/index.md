@@ -16,7 +16,7 @@ publishDate: 2023-01-14T01:55:33+01:00
 publication_types: ["2"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Under Review"
+publication: "Accepted at JAIR"
 publication_short: ""
 
 abstract: ""

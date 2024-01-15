@@ -1,23 +1,23 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Explainable Bengali Multiclass News Classification"
-authors: ["Md Fahim Sikder", "Md Ferdous", "Shraboni Afroz", "Uzzal Podder", "Kaniz Fatema", "Mohammad Nahid Hossain", "Md Tahmid Hasan", "Mrinal Kanti Baowaly"]
-date: 2023-11-14T17:34:24+01:00
+title: "Generative Model for Generating Temporal and Fair Data"
+authors: ["Md Fahim Sikder", "et. al"]
+date: 2024-01-15T12:23:56+01:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2023-11-14T17:34:24+01:00
+publishDate: 2024-01-15T12:23:56+01:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["1"]
+publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Accepted at 26th International Conference on Computer and Information Technology, Bangladesh, 2023"
-publication_short: "Accepted at ICCIT 2023"
+publication: "Work in Progress"
+publication_short: ""
 
 abstract: ""
 

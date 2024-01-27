@@ -26,10 +26,11 @@ bio: My research interests include deep learning, generative models, data privac
 
 # Interests to show in About widget
 interests:
+  - Artificial Intelligence
   - Deep Learning
   - Generative Models
   - Time-Series Generation
-  - Data Privacy
+  - Trustworthy AI
   - Data Fairness
   - Explainable AI (XAI)
   - Robotics

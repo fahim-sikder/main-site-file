@@ -4,7 +4,7 @@
 # This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 title: Md Fahim Sikder # Website name
-baseURL: 'https://fahimsikder.com/' # Website URL
+baseURL: 'https://fahim-sikder.github.io/' # Website URL
 
 ############################
 ## LANGUAGE

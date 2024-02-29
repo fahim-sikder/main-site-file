@@ -4,7 +4,7 @@
 title: "Explainable Bengali Multiclass News Classification"
 authors: ["Md Fahim Sikder", "Md Ferdous", "Shraboni Afroz", "Uzzal Podder", "Kaniz Fatema", "Mohammad Nahid Hossain", "Md Tahmid Hasan", "Mrinal Kanti Baowaly"]
 date: 2023-11-14T17:34:24+01:00
-doi: ""
+doi: "10.1109/ICCIT60459.2023.10441218"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2023-11-14T17:34:24+01:00
@@ -16,10 +16,10 @@ publishDate: 2023-11-14T17:34:24+01:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Accepted at 26th International Conference on Computer and Information Technology, Bangladesh, 2023"
-publication_short: "Accepted at ICCIT 2023"
+publication: "26th International Conference on Computer and Information Technology, 2023, Bangladesh"
+publication_short: "ICCIT 2023"
 
-abstract: ""
+abstract: "The automatic classification of news articles is crucial in the era of information overflow as it assists readers in accessing relevant information in a timely manner. Even though text classification is not a new area of study, there is potential for advancement concerning the Bengali language. Unlike other languages, Bengali is a complex language, and most of the datasets available online are imbalanced in terms of class label distribution. To increase the performance of classification methods and make them robust to handle imbalanced data, in this work, we propose a model consisting of pre-trained BERT architecture. We use a publicly available dataset of Bengali news articles with nine classes and achieve 92% accuracy. Along with the classification, explaining the model and the result is necessary for the application of trustworthy Artificial Intelligence. From this motivation, we use Integrated Gradient, an explainable AI technique, to explain the outcome of our model. We show which words in a news article affect the model to choose a particular class."
 
 # Summary. An optional shortened abstract.
 summary: ""
@@ -37,8 +37,8 @@ featured: false
 #   icon: twitter
 
 url_pdf:
-url_code:
-url_dataset:
+url_code: "https://github.com/fahim-sikder/explainable-bengali-news-classification"
+url_dataset: "https://www.kaggle.com/datasets/furcifer/bangla-newspaper-dataset"
 url_poster:
 url_project:
 url_slides:

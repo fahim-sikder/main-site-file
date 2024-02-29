@@ -18,8 +18,8 @@ authors = ["Md Fahim Sikder" , "Md. Jamal Uddin" , "Sajal Halder"]
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "In *5th International Conference on Informatics, Electronics & Vision (ICIEV)*, IEEE."
-publication_short = "In *ICIEV*"
+publication = "5th International Conference on Informatics, Electronics & Vision (ICIEV), 2016, Bangladesh"
+publication_short = "ICIEV 2016"
 
 # Abstract and optional shortened version.
 abstract = "Students academic performance is the reflection of both academic background and family support. This performance record is critical for the educational institution because they can learn from this to improve their quality. Educational data mining helps to analyze these data and extract information from it. We can determine the status of learners academic performance. For achieving this we can use techniques like decision tree, neural network, classification, data clustering, support vector machine and so on. In this paper, we will predict student’s yearly performance in the form of Cumulative Grade Point Average (CGPA) using neural network and compare that with real CGPA. In this regard, a real dataset would be of great importance. We used real dataset from Bangabandhu Sheikh Mujibur Rahman Science and Technology University (BSMRSTU) to perform the prediction."

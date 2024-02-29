@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Privacy-Preserving Synthetic Trajectory Data Generation"
+title: "Privacy-Preserving Synthetic Trajectory Data Generation (Extended Abstract)"
 authors: ["David Bergström", "Md Fahim Sikder", "Fredrik Heintz"]
 date: 2020-06-27T23:03:59+06:00
 doi: ""

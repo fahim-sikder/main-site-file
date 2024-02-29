@@ -19,8 +19,8 @@ publishDate: 2023-01-14T01:56:14+01:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "26th European Conference on Artificial Intelligence, Kraków, Poland"
-publication_short: "ECAI23"
+publication: "26th European Conference on Artificial Intelligence, Kraków, Poland, 2023"
+publication_short: "ECAI 2023"
 
 abstract: "Deep Generative Models (DGMs) for generating synthetic data with properties such as quality, diversity, fidelity, and privacy is an important research topic. Fairness is one particular aspect that has not received the attention it deserves. One difficulty is training DGMs with an in-process fairness objective, which can disturb the global convergence characteristics. To address this, we propose Fair Latent Deep Generative Models (FLDGMs) as enablers for more flexible and stable training of fair DGMs, by first learning a syntax-agnostic, model-agnostic fair latent representation (low dimensional) of the data. This separates the fairness optimization and data generation processes thereby boosting stability and optimization performance. Moreover, data generation in the low dimensional space enhances  the accessibility of models by reducing computational demands. We conduct extensive experiments on image and tabular domains using Generative Adversarial Networks (GANs) and Diffusion Models (DMs) and compare them to the state-of-the-art in terms of fairness and utility. Our proposed FLDGMs achieve superior performance in generating high-quality, high-fidelity, and high-diversity fair synthetic data compared to the state-of-the-art fair generative models."
 

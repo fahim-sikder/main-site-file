@@ -18,8 +18,8 @@ authors = ["Md Fahim Sikder" , "Sajal Halder" , "Tanvir Hasan" , "Md. Jamal Uddi
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "In *4th International Conference on Advances on Electrical Engineering (ICAEE)*, IEEE."
-publication_short = "In *ICAEE*"
+publication = "4th International Conference on Advances on Electrical Engineering (ICAEE), 2017, Bangladesh"
+publication_short = "ICAEE 2017"
 
 # Abstract and optional shortened version.
 abstract = "The devastations of natural disasters are the lashes of mother nature that hit us every year with a whip. These are inevitable. There are no alternative ways to prevent this incident, but we can take proper steps to reduce its damage. Nowadays a great deal of attention has been given to the potential applications of mobile communication technology. Short Message System (SMS) has a huge impact on the communication system. This paper proposes an android application which can alert people before a natural disaster such as cyclone and flood strike, and tell them the optimal route to the nearest shelter via SMS or voice call. In evacuation process, we have used partition based shortest technique to find nearest shelter place."

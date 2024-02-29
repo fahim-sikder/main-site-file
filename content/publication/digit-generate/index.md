@@ -18,8 +18,8 @@ authors = ["Md Fahim Sikder"]
 publication_types = ["1"]
 
 # Publication name and optional abbreviated version.
-publication = "In *International Joint Conference on Computational Intelligence (IJCCI)*, Springer."
-publication_short = "In *IJCCI*"
+publication = "International Joint Conference on Computational Intelligence (IJCCI), 2018, Bangladesh"
+publication_short = "IJCCI 2018"
 
 # Abstract and optional shortened version.
 abstract = "Handwritten digit or numeral recognition is one of the classical issues in the area of pattern recognition and has seen tremendous advancement because of the recent wide availability of computing resources. Plentiful works have already done on English, Arabic, Chinese, Japanese handwritten script. Some work on Bangla also have been done but there is space for development. From that angle, in this paper, an architecture has been implemented which achieved the validation accuracy of 99.44% on BHAND dataset and outperforms Alexnet and Inception V3 architecture. Beside digit recognition, digit generation is another field which has recently caught the attention of the researchers though not many works have been done in this field especially on Bangla. In this paper, a Semi-Supervised Generative Adversarial Network or SGAN has been applied to generate Bangla handwritten numerals and it successfully generated Bangla digits."

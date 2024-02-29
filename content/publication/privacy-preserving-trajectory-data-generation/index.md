@@ -1,7 +1,7 @@
 ---
 # Documentation: https://sourcethemes.com/academic/docs/managing-content/
 
-title: "Privacy-Preserving Synthetic Trajectory Data Generation (Extended Abstract)"
+title: "Privacy-Preserving Synthetic Trajectory Data Generation"
 authors: ["David Bergström", "Md Fahim Sikder", "Fredrik Heintz"]
 date: 2020-06-27T23:03:59+06:00
 doi: ""
@@ -17,7 +17,7 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "32nd Swedish AI Society Workshop (SAIS) 2020"
-publication_short: "SAIS 2020"
+publication_short: "SAIS 2020 as extended abstract"
 
 abstract: "A major open research challenge is developing privacy-preserving machine learning methods that both achieve high performance and privacy guarantees even though the original training data contains sensitive personal information. The applications are abundant, from making cities safer, via on-demand public transportation systems to improved medical diagnosis. The goal of our PhD projects is to develop new machine learning methods for creating synthetic spatio-temporal trajectory data sets preserving the privacy of the individuals in the original data. We will 1) extend generative adversarial network (GAN) methods to learn generative spatio-temporal trajectory models and 2) develop new Bayesian Optimization methods for creating tailored privacy-preserving synthetic data sets using these generative models."
 

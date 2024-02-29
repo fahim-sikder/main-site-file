@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
+url_pdf: "uploads/explainable-bengali.pdf"
 url_code: "https://github.com/fahim-sikder/explainable-bengali-news-classification"
 url_dataset: "https://www.kaggle.com/datasets/furcifer/bangla-newspaper-dataset"
 url_poster:

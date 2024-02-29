@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Generating Private and Fair Long-Sequenced Longitudinal Healthcare Records (Extended Abstract)"
+title: "Generating Private and Fair Long-Sequenced Longitudinal Healthcare Records"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Fredrik Heintz"]
 date: 2023-06-07T13:44:59+02:00
 doi: ""
@@ -17,7 +17,7 @@ publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "The 35th Swedish Artificial Intelligence Society (SAIS'23) Annual Workshop"
-publication_short: "SAIS 2023"
+publication_short: "SAIS 2023 as extended abstract"
 
 abstract: "Generating long-sequenced longitudinal healthcare records is critical as it has numerous potential applications. Long-sequenced longitudinal data allow us to better understand and find patterns from the data. However, privacy concerns make it challenging to share the data, and real-world data is not bias-free. Generative Adversarial Networks (GAN) have been used to synthesize healthcare records, but the high dimensionality of these data makes them challenging to generate. From these motivations, we are working on a diffusion-based model that is capable of generating long-sequenced, fair, and private healthcare records."
 

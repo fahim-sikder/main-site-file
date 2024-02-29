@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Generative Model for Time-Series and Fair Data Generation (Extended Abstract)"
+title: "Generative Model for Time-Series and Fair Data Generation"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
 date: 2024-01-15T12:23:56+01:00
 doi: ""
@@ -13,11 +13,11 @@ publishDate: 2024-01-15T12:23:56+01:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
 publication: "The 7th Swedish Symposium on Deep Learning, 2024, Sweden"
-publication_short: "SSBA/SSDL 2024"
+publication_short: "SSBA/SSDL 2024 as extended abstract"
 
 abstract: ""
 

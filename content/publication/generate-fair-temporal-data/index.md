@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Generative Model for Time-Series and Fair Data Generation"
+title: "Generative Models for Time-Series and Fair Data Generation"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
 date: 2024-01-15T12:23:56+01:00
 doi: ""
@@ -39,7 +39,7 @@ featured: false
 url_pdf:
 url_code:
 url_dataset:
-url_poster:
+url_poster: "uploads/fair-time-series-poster.pdf"
 url_project:
 url_slides:
 url_source:

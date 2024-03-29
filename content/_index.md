@@ -85,6 +85,8 @@ sections:
               * Research
               * Supervising Master's Thesis Students
               * Conducting Labs
+              * Department Representative (IDA), Linköping University PhD Student Network (LiU PhD)
+              * Member, IDA PhD Council
         - title: Lecturer
           company: Institute of Science Trade & Technology (ISTT)
           company_url: 'https://istt.edu.bd/'

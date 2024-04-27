@@ -83,9 +83,10 @@ sections:
               Responsibilities include:
             
               * Research
-              * Supervising Master's Thesis Students
+              * Supervising Master's Thesis
               * Conducting Labs
-              * Department Representative (IDA), Linköping University PhD Student Network (LiU PhD)
+              * Presidium Member, Linköping University PhD Student Network (LiU PhD) (Board: 2024/25)
+              * Department Representative (IDA), Linköping University PhD Student Network (LiU PhD) (Board: 2023/24)
               * Member, IDA PhD Council
         - title: Lecturer
           company: Institute of Science Trade & Technology (ISTT)

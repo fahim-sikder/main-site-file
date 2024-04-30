@@ -4,7 +4,7 @@
 title: "TransFusion: Generating Long, High-Fidelity Time Series using Diffusion Models with Transformers"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Fredrik Heintz"]
 date: 2023-01-14T01:55:53+01:00
-doi: ""
+doi: "https://doi.org/10.48550/arXiv.2307.12667"
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2023-01-14T01:55:53+01:00
@@ -19,13 +19,13 @@ publication_types: ["2"]
 publication: "Under Review"
 publication_short: ""
 
-abstract: ""
+abstract: "The generation of high-quality, long-sequenced time-series data is essential due to its wide range of applications. In the past, standalone Recurrent and Convolutional Neural Network-based Generative Adversarial Networks (GAN) were used to synthesize time-series data. However, they are inadequate for generating long sequences of time-series data due to limitations in the architecture. Furthermore, GANs are well known for their training instability and mode collapse problem. To address this, we propose TransFusion, a diffusion, and transformers-based generative model to generate high-quality long-sequence time-series data. We have stretched the sequence length to 384, and generated high-quality synthetic data. Also, we introduce two evaluation metrics to evaluate the quality of the synthetic data as well as its predictive characteristics. We evaluate TransFusion with a wide variety of visual and empirical metrics, and TransFusion outperforms the previous state-of-the-art by a significant margin."
 
 # Summary. An optional shortened abstract.
 summary: ""
 
-tags: []
-categories: []
+tags: ["generative models", "time-series generation", "synthetic data"]
+categories: ["publication"]
 featured: false
 
 # Custom links (optional).
@@ -36,8 +36,8 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+url_pdf: "https://arxiv.org/pdf/2307.12667"
+url_code: "https://github.com/fahim-sikder/TransFusion"
 url_dataset:
 url_poster: "uploads/TransFusion-Poster.pdf"
 url_project:

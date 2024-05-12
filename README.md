@@ -67,3 +67,24 @@ Then run `hugo mod clean` command, then revert the changes to `config.yaml`.
 Now, run the `hugo server` command, it should work.
 
 Tested with hugo version `v0.115.0`
+
+## To add new publications
+
+Using bibtex file:
+
+first install the academic package:
+
+```terminal
+pip3 install -U academic
+```
+
+```
+academic import --bibtex data/publications.bib
+```
+
+Using command line:
+
+```terminal
+hugo new content/publication/<my-publication>
+```
+

@@ -1,13 +1,13 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "TripleX: A Comprehensive Python Package for Fairness, Utility, and eXplainability for Model Analysis"
+title: "FairX: A Comprehensive Python Package for Fairness, Utility, and eXplainability for Model Analysis"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
-date: 2024-05-12T14:15:11+02:00
+date: 2024-05-31T23:19:19+02:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2024-05-12T14:15:11+02:00
+publishDate: 2024-05-31T23:19:19+02:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;

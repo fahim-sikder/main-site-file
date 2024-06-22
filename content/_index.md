@@ -103,54 +103,54 @@ sections:
               * Conducting Class & Labs
               * Research
               * Supervising Research Students
-    design:
-      columns: '2'
-  - block: accomplishments
-    id: accomplishments
-    content:
-      # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
-      title: 'Accomplish&shy;ments'
-      subtitle:
-      # Date format: https://wowchemy.com/docs/customization/#date-format
-      date_format: Jan 2006
-      # Accomplishments.
-      #   Add/remove as many `item` blocks below as you like.
-      #   `title`, `organization`, and `date_start` are the required parameters.
-      #   Leave other parameters empty if not required.
-      #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
-      items:
-        - certificate_url: https://www.coursera.org/account/accomplishments/verify/L6V45W4LPH63
-          date_end: ""
-          date_start: "2019-04-01"
-          description: ""
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Improving Deep Neural Networks - Hyperparameter tuning, Regularization and Optimization
-          url: https://www.coursera.org/learn/deep-neural-network
-        - certificate_url: https://www.coursera.org/account/accomplishments/verify/JLEU9KMKE8JQ
-          date_end: ""
-          date_start: "2019-05-01"
-          description: ""
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Sequence Models
-          url: https://www.coursera.org/learn/nlp-sequence-models
-        - certificate_url: https://www.coursera.org/account/accomplishments/verify/WYLEBCEMJBMT
-          date_end: ""
-          date_start: "2019-06-01"
-          description: ""
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Convolutional Neural Networks
-          url: https://www.coursera.org/learn/convolutional-neural-networks
-        - certificate_url: https://www.coursera.org/account/accomplishments/verify/XYEP45ANG472
-          date_end: ""
-          date_start: "2019-12-01"
-          description: ""
-          organization: Coursera
-          organization_url: https://www.coursera.org
-          title: Convolutional Neural Networks in TensorFlow
-          url: https://www.coursera.org/learn/convolutional-neural-networks-tensorflow
+  #   design:
+  #     columns: '2'
+  # - block: accomplishments
+  #   id: accomplishments
+  #   content:
+  #     # Note: `&shy;` is used to add a 'soft' hyphen in a long heading.
+  #     title: 'Accomplish&shy;ments'
+  #     subtitle:
+  #     # Date format: https://wowchemy.com/docs/customization/#date-format
+  #     date_format: Jan 2006
+  #     # Accomplishments.
+  #     #   Add/remove as many `item` blocks below as you like.
+  #     #   `title`, `organization`, and `date_start` are the required parameters.
+  #     #   Leave other parameters empty if not required.
+  #     #   Begin multi-line descriptions with YAML's `|2-` multi-line prefix.
+  #     items:
+  #       - certificate_url: https://www.coursera.org/account/accomplishments/verify/L6V45W4LPH63
+  #         date_end: ""
+  #         date_start: "2019-04-01"
+  #         description: ""
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Improving Deep Neural Networks - Hyperparameter tuning, Regularization and Optimization
+  #         url: https://www.coursera.org/learn/deep-neural-network
+  #       - certificate_url: https://www.coursera.org/account/accomplishments/verify/JLEU9KMKE8JQ
+  #         date_end: ""
+  #         date_start: "2019-05-01"
+  #         description: ""
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Sequence Models
+  #         url: https://www.coursera.org/learn/nlp-sequence-models
+  #       - certificate_url: https://www.coursera.org/account/accomplishments/verify/WYLEBCEMJBMT
+  #         date_end: ""
+  #         date_start: "2019-06-01"
+  #         description: ""
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Convolutional Neural Networks
+  #         url: https://www.coursera.org/learn/convolutional-neural-networks
+  #       - certificate_url: https://www.coursera.org/account/accomplishments/verify/XYEP45ANG472
+  #         date_end: ""
+  #         date_start: "2019-12-01"
+  #         description: ""
+  #         organization: Coursera
+  #         organization_url: https://www.coursera.org
+  #         title: Convolutional Neural Networks in TensorFlow
+  #         url: https://www.coursera.org/learn/convolutional-neural-networks-tensorflow
     design:
       columns: '2'
   # - block: portfolio
@@ -257,10 +257,12 @@ sections:
   - block: markdown
     id: achievements
     content:
-      title: Achievements
+      title: 'Accomplish&shy;ments'
       subtitle: 
       text: |-
         - **Call to Arms Award (Reviewer)**, 26th European Conference on Artificial Intelligence (ECAI 2023), 2023
+        - **Program Committee Member**, 26th European Conference on Artificial Intelligence (ECAI 2023), 2023
+        - **Program Committee Member**, 18th Swedish National Computer Networking and Cloud Computing Workshop (SNCNW 2023), 2023
         - **Finalist**, Student Project Competition, Linköping Hockey Analytics Conference (LINHAC) 2022, 2022
         - NVIDIA GPU Grant, NVIDIA, 2018
         - **Champion**, NASA Space Apps Challenge 2016, Rajshahi Region, Bangladesh, 2016

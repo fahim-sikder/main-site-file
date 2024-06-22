@@ -10,9 +10,9 @@ main:
   - name: Experience
     url: '#experience'
     weight: 20
-  - name: Accomplishments
-    url: '#accomplishments'
-    weight: 30
+  # - name: Accomplishments
+  #   url: '#accomplishments'
+  #   weight: 30
   - name: Publications
     url: '#featured'
     weight: 40
@@ -22,7 +22,7 @@ main:
   - name: Posts
     url: '#posts'
     weight: 60
-  - name: Achievements
+  - name: Accomplishments
     url: '#achievements'
     weight: 70
   - name: Hobby

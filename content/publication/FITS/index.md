@@ -2,9 +2,10 @@
 # Documentation: https://wowchemy.com/docs/managing-content/
 
 title: "Fair Image and Tabular data Synthesis (FITS) via Generating Fair Latent Space"
-authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
+authors: ["Md Fahim Sikder", "Daniel de Leng", "Fredrik Heintz"]
 date: 2024-05-12T14:15:06+02:00
 doi: ""
+draft: True
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2024-05-12T14:15:06+02:00

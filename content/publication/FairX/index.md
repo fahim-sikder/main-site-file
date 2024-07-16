@@ -16,8 +16,8 @@ publishDate: 2024-05-31T23:19:19+02:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Under Review"
-publication_short: ""
+publication: "Accepted at Second AEQUITAS Workshop on Fairness and Bias in AI, Co-located with ECAI 2024"
+publication_short: "Accepted at AEQUITAS, co-located with ECAI2024"
 
 abstract: "We present FairX, an open-source Python-based benchmarking tool designed for the comprehensive analysis of models under the umbrella of fairness, utility, and eXplainability (XAI). FairX enables users to train benchmarking bias-removal models and evaluate their fairness using a wide array of fairness metrics, data utility metrics, and generate explanations for model predictions, all within a unified framework. Existing benchmarking tools do not have the way to evaluate synthetic data generated from fair generative models, also they do not have the support for training fair generative models either. In FairX, we add fair generative models in the collection of our fair-model library (pre-processing, in-processing, post-processing) and evaluation metrics for evaluating the quality of synthetic fair data. This version of FairX supports both tabular and image datasets. It also allows users to provide their own custom datasets. The open-source FairX benchmarking package is publicly available at https://github.com/fahim-sikder/FairX."
 

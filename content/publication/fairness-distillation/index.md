@@ -1,10 +1,11 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Fair Generation through Hints-based Latent Space Distillation"
-authors: ["Resmi Ramachandranpillai", "Md Fahim Sikder", "Daniel de Leng", "Fredrik Heintz"]
+title: "Learning Fair Representation using Distillation for Syntax-agnostic Data"
+authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
 date: 2024-05-12T14:12:53+02:00
 doi: ""
+draft: False
 
 # Schedule page publish date (NOT publication's date).
 publishDate: 2024-05-12T14:12:53+02:00

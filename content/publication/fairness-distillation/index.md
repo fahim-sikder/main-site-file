@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Learning Fair Representation using Distillation for Syntax-agnostic Data"
+title: "Generating Synthetic Fair Syntax-agnostic Data by Learning and Distilling Fair Representation"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
 date: 2024-05-12T14:12:53+02:00
 doi: ""

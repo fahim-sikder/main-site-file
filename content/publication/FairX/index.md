@@ -36,7 +36,7 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://arxiv.org/pdf/2406.14281"
+url_pdf: "https://ceur-ws.org/Vol-3808/paper16.pdf"
 url_code: "https://github.com/fahim-sikder/FairX"
 url_dataset:
 url_poster:

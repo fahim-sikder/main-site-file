@@ -45,7 +45,7 @@ education:
       institution: Jahangirnagar University, Bangladesh
       year: 2018
     - course: Bachelor of Science (Engineering) in Computer Science & Engineering
-      institution: Bangabandhu Sheikh Mujibur Rahman Science & Technology University, Gopalganj, Bangladesh
+      institution: Gopalganj Science and Technology University, Bangladesh (Formerly- Bangabandhu Sheikh Mujibur Rahman Science and Technology University) 
       year: 2016
     - course: Higher Secondary Certificate Examination
       institution: Khilgaon Government High School, Bangladesh

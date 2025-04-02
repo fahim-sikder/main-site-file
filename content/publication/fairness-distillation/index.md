@@ -17,7 +17,7 @@ publishDate: 2024-05-12T14:12:53+02:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Under Review"
+publication: "Work in Progress"
 publication_short: ""
 
 abstract: ""

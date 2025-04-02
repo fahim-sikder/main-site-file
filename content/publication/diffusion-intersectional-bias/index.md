@@ -1,19 +1,19 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "TransFusion: Generating Long, High-Fidelity Time Series using Diffusion Models with Transformers"
-authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Fredrik Heintz"]
-date: 2023-01-14T01:55:53+01:00
+title: "Mitigating Intersectional Bias Through Diffusion-Driven Fair Representation"
+authors: ["Md Fahim Sikder", "Daniel de Leng", "Fredrik Heintz"]
+date: 2025-02-19T19:19:07+01:00
 doi: ""
 
 # Schedule page publish date (NOT publication's date).
-publishDate: 2023-01-14T01:55:53+01:00
+publishDate: 2025-02-19T19:19:07+01:00
 
 # Publication type.
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["0"]
+publication_types: ["3"]
 
 # Publication name and optional abbreviated publication name.
 publication: "Work in Progress"
@@ -39,7 +39,7 @@ featured: false
 url_pdf:
 url_code:
 url_dataset:
-url_poster: "uploads/TransFusion-Poster.pdf"
+url_poster:
 url_project:
 url_slides:
 url_source:

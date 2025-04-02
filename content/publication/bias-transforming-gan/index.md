@@ -26,7 +26,7 @@ summary: ""
 
 tags: ["synthetic-data-generation", "data-fairness", "medical-domain"]
 categories: ["publication"]
-featured: true
+featured: false
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.

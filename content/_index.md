@@ -260,6 +260,7 @@ sections:
       title: 'Accomplish&shy;ments'
       subtitle: 
       text: |-
+        - **Champion**, Employee Scheduling Category, Hackaping 2025, 2025
         - **Call to Arms Award (Reviewer)**, 26th European Conference on Artificial Intelligence (ECAI 2023), 2023
         - **Program Committee Member**, 26th European Conference on Artificial Intelligence (ECAI 2023), 2023
         - **Program Committee Member**, 18th Swedish National Computer Networking and Cloud Computing Workshop (SNCNW 2023), 2023

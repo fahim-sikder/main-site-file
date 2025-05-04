@@ -77,9 +77,12 @@ social:
   - icon: orcid
     icon_pack: fab
     link: https://orcid.org/0000-0001-5307-997X
-  - icon: medium
-    icon_pack: fab
-    link: https://medium.com/@fahimsikder
+  # - icon: medium
+  #   icon_pack: fab
+  #   link: https://medium.com/@fahimsikder
+  - icon: dblp
+    icon_pack: ai
+    link: https://dblp.org/pid/272/9841.html
 
 # Enter email to display Gravatar (if Gravatar enabled in Config)
 email: ''

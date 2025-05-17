@@ -1,7 +1,7 @@
 ---
 # Documentation: https://wowchemy.com/docs/managing-content/
 
-title: "Mitigating Intersectional Bias Through Diffusion-Driven Fair Representation"
+title: "Diff-Fair: Mitigating Intersectional Bias Through Diffusion-Driven Fair Representation"
 authors: ["Md Fahim Sikder", "Daniel de Leng", "Fredrik Heintz"]
 date: 2025-02-19T19:19:07+01:00
 doi: ""
@@ -13,10 +13,10 @@ publishDate: 2025-02-19T19:19:07+01:00
 # Legend: 0 = Uncategorized; 1 = Conference paper; 2 = Journal article;
 # 3 = Preprint / Working Paper; 4 = Report; 5 = Book; 6 = Book section;
 # 7 = Thesis; 8 = Patent
-publication_types: ["3"]
+publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Work in Progress"
+publication: "Under Review"
 publication_short: ""
 
 abstract: ""

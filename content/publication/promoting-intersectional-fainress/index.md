@@ -17,7 +17,7 @@ publishDate: 2025-05-03T11:21:34+02:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Under Review"
+publication: "Accepted at ECAI 2025"
 publication_short: ""
 
 abstract: ""

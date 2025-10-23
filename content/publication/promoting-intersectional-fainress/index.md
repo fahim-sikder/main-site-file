@@ -3,7 +3,7 @@
 
 title: "Promoting Intersectional Fairness through Knowledge Distillation"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
-date: 2025-05-03T11:21:34+02:00
+date: 2025-10-23T11:21:34+02:00
 doi: "http://doi.org/10.3233/FAIA251214"
 draft: false
 
@@ -27,7 +27,7 @@ summary: ""
 
 tags: []
 categories: []
-featured: false
+featured: true
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.

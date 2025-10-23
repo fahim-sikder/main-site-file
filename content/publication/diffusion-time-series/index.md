@@ -26,7 +26,7 @@ summary: ""
 
 tags: ["generative models", "time-series generation", "synthetic data"]
 categories: ["publication"]
-featured: true
+featured: false
 
 # Custom links (optional).
 #   Uncomment and edit lines below to show custom links.

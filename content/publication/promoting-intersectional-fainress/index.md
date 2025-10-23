@@ -4,7 +4,7 @@
 title: "Promoting Intersectional Fairness through Knowledge Distillation"
 authors: ["Md Fahim Sikder", "Resmi Ramachandranpillai", "Daniel de Leng", "Fredrik Heintz"]
 date: 2025-05-03T11:21:34+02:00
-doi: ""
+doi: "http://doi.org/10.3233/FAIA251214"
 draft: false
 
 # Schedule page publish date (NOT publication's date).
@@ -17,10 +17,10 @@ publishDate: 2025-05-03T11:21:34+02:00
 publication_types: ["1"]
 
 # Publication name and optional abbreviated publication name.
-publication: "Accepted at ECAI 2025"
-publication_short: ""
+publication: "28th European Conference on Artificial Intelligence, Bologna, Italy, 2025"
+publication_short: "ECAI 2025"
 
-abstract: ""
+abstract: "As Artificial Intelligence-driven decision-making systems become increasingly popular, ensuring fairness in their outcomes has emerged as a critical and urgent challenge. AI models, often trained on open-source datasets embedded with human and systemic biases, risk producing decisions that disadvantage certain demographics. This challenge intensifies when multiple sensitive attributes interact, leading to intersectional bias, a compounded and uniquely complex form of unfairness. Over the years, various methods have been proposed to address bias at the data and model levels. However, mitigating intersectional bias in decision-making remains an under-explored challenge. Motivated by this gap, we propose a novel framework that leverages knowledge distillation to promote intersectional fairness. Our approach proceeds in two stages: first, a teacher model is trained solely to maximize predictive accuracy, followed by a student model that inherits the teacher's representational knowledge while incorporating intersectional fairness constraints. The student model integrates tailored loss functions that enforce parity in false positive rates and demographic distributions across intersectional groups, alongside an adversarial objective that minimizes protected attribute information within the learned representation. Empirical evaluation across multiple benchmark datasets demonstrates that we achieve a 52% increase in accuracy for multi-class classification and a 61% reduction in average false positive rate across intersectional groups and outperforms state-of-the-art models. This distillation-based methodology provides a more stable optimization opportunity than direct fairness approaches, resulting in substantially fairer representations, particularly for multiple sensitive attributes and underrepresented demographic intersections."
 
 # Summary. An optional shortened abstract.
 summary: ""
@@ -37,10 +37,10 @@ featured: false
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf:
-url_code:
+url_pdf: "https://ebooks.iospress.nl/doi/10.3233/FAIA251214"
+url_code: "https://github.com/fahim-sikder/FairX"
 url_dataset:
-url_poster:
+url_poster: "uploads/Poster-ECAI-KD.pdf"
 url_project:
 url_slides:
 url_source:

@@ -42,7 +42,7 @@ url_code: "https://github.com/fahim-sikder/FairX"
 url_dataset:
 url_poster: "uploads/Poster-ECAI-KD.pdf"
 url_project:
-url_slides:
+url_slides: "uploads/Promoting-intersectional.pdf"
 url_source:
 url_video:
 

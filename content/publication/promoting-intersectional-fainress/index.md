@@ -37,7 +37,7 @@ featured: true
 #   icon_pack: fab
 #   icon: twitter
 
-url_pdf: "https://ebooks.iospress.nl/doi/10.3233/FAIA251214"
+url_pdf: "uploads/intersectional-KD.pdf"
 url_code: "https://github.com/fahim-sikder/FairX"
 url_dataset:
 url_poster: "uploads/Poster-ECAI-KD.pdf"

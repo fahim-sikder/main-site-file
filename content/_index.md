@@ -181,6 +181,17 @@ sections:
   #     # For Showcase view, flip alternate rows?
   #     flip_alt_rows: false
   - block: collection
+    id: News
+    content:
+      title: News
+      filters:
+        folders:
+          - news
+      count: 5
+    design:
+      columns: '2'
+      view: date-list
+  - block: collection
     id: featured
     content:
       title: Featured Publications
@@ -237,18 +248,8 @@ sections:
   #     subtitle: 
   #     text: |-
   #       Hello world!
-  #   design:
-  #     columns: '2'
-  # - block: collection
-  #   id: talks
-  #   content:
-  #     title: Recent & Upcoming Talks
-  #     filters:
-  #       folders:
-  #         - event
-  #   design:
-  #     columns: '2'
-  #     view: compact
+    design:
+      columns: '2'
   # - block: tag_cloud
   #   content:
   #     title: Popular Topics

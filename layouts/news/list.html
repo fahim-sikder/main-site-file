@@ -1,0 +1,42 @@
+{{- define "main" -}}
+
+{{ partial "page_header.html" . }}
+
+<div class="universal-wrapper">
+  <div class="row">
+    <div class="col-lg-12">
+
+      {{ with .Content }}
+      <div class="article-style">{{ . }}</div>
+      {{ end }}
+
+      {{- $paginator := .Paginate (where .Pages "Type" "news") }}
+
+      {{- if gt $paginator.TotalPages 0 }}
+
+      <div class="news-list-simple">
+        {{- range $index, $item := $paginator.Pages }}
+        <div class="news-item" style="margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px solid #e0e0e0;">
+          <div style="display: flex; gap: 1.5rem; align-items: baseline;">
+            <time datetime="{{ $item.Date }}" style="color: #666; font-size: 0.9rem; white-space: nowrap; min-width: 120px;">
+              {{ $item.Date.Format "January 2, 2006" }}
+            </time>
+            <h3 style="margin: 0; font-size: 1.1rem; font-weight: 500;">
+              <a href="{{ $item.RelPermalink }}" style="color: #333; text-decoration: none;">
+                {{ $item.Title }}
+              </a>
+            </h3>
+          </div>
+        </div>
+        {{- end }}
+      </div>
+
+      {{- partial "pagination" . }}
+
+      {{- end }}
+
+    </div>
+  </div>
+</div>
+
+{{- end -}}

@@ -1,0 +1,15 @@
+{{ $item := .item }}
+{{ $has_attachments := partial "functions/has_attachments" $item }}
+
+<div class="news-item-date-list" style="margin-bottom: 1rem; padding-bottom: 0.75rem; border-bottom: 1px solid #e0e0e0;">
+  <div style="display: flex; gap: 1.5rem; align-items: baseline;">
+    <time datetime="{{ $item.Date }}" style="color: #666; font-size: 0.9rem; white-space: nowrap; min-width: 120px;">
+      {{ $item.Date.Format "January 2, 2006" }}
+    </time>
+    <h3 style="margin: 0; font-size: 1.1rem; font-weight: 500;">
+      <a href="{{ $item.RelPermalink }}" style="color: #333; text-decoration: none;">
+        {{ $item.Title }}
+      </a>
+    </h3>
+  </div>
+</div>

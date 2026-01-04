@@ -85,7 +85,7 @@ sections:
               * Research
               * Supervising Master's Thesis
               * Conducting Labs
-              * Chair, IDA PhD Council (Board: 2024)
+              * Chair, IDA PhD Council (Board: 2024, 2025)
               * Presidium Member, Linköping University PhD Student Network (LiU PhD) (Board: 2024/25)
               * Department Representative (IDA), Linköping University PhD Student Network (LiU PhD) (Board: 2023/24)
         - title: Lecturer

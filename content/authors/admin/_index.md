@@ -40,7 +40,7 @@ education:
   courses:
     - course: Ph.D. in Computer Science
       institution: Linköping University, Sweden
-      year: Ongoing
+      year: 2026
     - course: Master of Science in Computer Science
       institution: Jahangirnagar University, Bangladesh
       year: 2018
@@ -90,8 +90,7 @@ email: ''
 # Highlight the author in author lists? (true/false)
 highlight_name: true
 ---
-
-Md Fahim Sikder is currently pursuing his Ph.D. under the guidance of Professor [Fredrik Heintz](https://www.ida.liu.se/~frehe08/) and Assistant Professor [Daniel de Leng](https://liu.se/en/employee/dande27) at the Reasoning and Learning (ReaL) Lab, IDA, Linköping University, Sweden. His research focuses on creating **Generative Models for Time-Series and Fair Data Generation**. Before this, Fahim served as a Lecturer in the Computer Science and Engineering department at the Institute of Science, Trade, and Technology (ISTT). He also took on the roles of Coordinator of the HEAP Programming Club and Coach of the ACM ICPC team at ISTT.
+Md Fahim Sikder is a researcher specializing in algorithmic fairness and generative modeling.  He completed his Ph.D from Reasoning and Learning Lab (ReaL), IDA, Linköping University, Sweden, where his research focused on developing generative models and fair representation learning techniques that address intersectional bias in AI decision-making systems. Before pursuing his doctorate, Fahim served as a Lecturer in the Computer Science and Engineering department at the Institute of Science, Trade, and Technology (ISTT). He also took on the roles of Coordinator of the HEAP Programming Club and Coach of the ACM ICPC team at ISTT.
 
 Fahim's research interests include Artificial Intelligence, Generative Models, Trustworthy AI.
 
